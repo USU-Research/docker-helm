@@ -9,3 +9,5 @@ already in the the great [devth/helm-docker](https://github.com/devth/helm-docke
 
 We added
 - [jq](https://stedolan.github.io/jq/) for parsing json
+- "Europe/Berlin" Timezone 
+- zip 
