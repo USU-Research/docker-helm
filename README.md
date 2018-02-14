@@ -11,3 +11,4 @@ We added
 - [jq](https://stedolan.github.io/jq/) for parsing json
 - "Europe/Berlin" Timezone 
 - zip 
+- gnupg for en- and decrypting files
