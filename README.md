@@ -12,3 +12,4 @@ We added
 - "Europe/Berlin" Timezone 
 - zip 
 - gnupg for en- and decrypting files
+- jitcrypt for decryption
