@@ -1,4 +1,4 @@
-FROM devth/helm:v2.9.1
+FROM devth/helm:v2.10.0
 
 MAINTAINER USU Software AG
 
