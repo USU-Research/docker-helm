@@ -4,6 +4,8 @@ MAINTAINER USU Software AG
 
 RUN apk --update add jq tzdata zip coreutils gnupg bash-completion && rm -rf /var/cache/apk/*
 RUN cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime && echo "Europe/Berlin" >  /etc/timezone
+
+RUN echo ". /etc/profile.d/bash_completion.sh" >> ~/.bashrc 
 RUN echo "source <(kubectl completion bash)" >> ~/.bashrc
 
 ADD ./jitcrypt /bin
