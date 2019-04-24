@@ -1,5 +1,7 @@
 FROM devth/helm:v2.12.3
 
+ENV TERRAFORM_VERSION=0.11.13
+
 MAINTAINER USU Software AG
 
 RUN apk --update add jq tzdata zip coreutils gnupg bash-completion && rm -rf /var/cache/apk/*
@@ -10,3 +12,9 @@ RUN echo "source <(kubectl completion bash)" >> ~/.bashrc
 
 ADD ./jitcrypt /bin
 RUN chmod u+x /bin/jitcrypt
+
+RUN helm plugin install https://github.com/chartmuseum/helm-push
+
+RUN wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+  unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin && \
+  rm -f  terraform_${TERRAFORM_VERSION}_linux_amd64.zip
