@@ -1,4 +1,4 @@
-FROM devth/helm:v2.12.3
+FROM devth/helm:v2.13.1
 
 ENV TERRAFORM_VERSION=0.11.13
 
